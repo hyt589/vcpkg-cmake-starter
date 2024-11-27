@@ -36,7 +36,7 @@ If `vcpkg` is not found on the system as described above, this project will auto
 
 ```bash
 cmake -B build --preset default
-./build/vcpkg add fmt spdlog # add any package you want
+./build/vcpkg add port fmt spdlog # add any package you want
 ./build/vcpkg install
 cmake --build build -- -j $(nproc)
 ```
