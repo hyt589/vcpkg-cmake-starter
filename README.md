@@ -12,7 +12,7 @@ There are 3 ways to use the `vcpkg` program with this project template:
 
 To do this, you will first need to obtain an export of dependent libraries via steps described in [the official docs](https://learn.microsoft.com/en-us/vcpkg/commands/export). This will produce a package of the libraries in a format that you specified.
 
-Then, extract the generated export into the filesystem, and provide the extrated path to `cmake` via the variable `EXPORT_SDK_PATH`:
+Then, extract the generated export into the filesystem, and provide the extracted path to `cmake` via the variable `EXPORT_SDK_PATH`:
 
 ```bash
 cmake -B build -D EXPORT_SDK_PATH=<extracted/path> --preset default
@@ -22,7 +22,7 @@ cmake -B build -D EXPORT_SDK_PATH=<extracted/path> --preset default
 
 If you have installed `vcpkg` on your system and properly configured the `VCPKG_ROOT` environment variable, as described in [the installation guide](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash), this project can then use the system `vcpkg` in [manifest mode](https://learn.microsoft.com/en-us/vcpkg/concepts/manifest-mode).
 
-The `vcpkg.json` and `vcpkg-configuration.json` is automatically generated when you invoke `cmake` for the first time:
+The `vcpkg.json` and `vcpkg-configuration.json` is automatically generated (and should be added to version control) when you invoke `cmake` for the first time:
 
 ```bash
 cmake -B build --preset default
